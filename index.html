@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Life Emergency Navigator
+    </title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- Leaflet Map CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            🆘
+            <span data-en="Life Emergency Navigator"
+                  data-hi="लाइफ इमरजेंसी नेविगेटर">
+                Life Emergency Navigator
+            </span>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#home"
+               data-en="Home"
+               data-hi="होम">
+                Home
+            </a>
+
+            <a href="#emergency"
+               data-en="Emergency"
+               data-hi="इमरजेंसी">
+                Emergency
+            </a>
+
+            <a href="#services"
+               data-en="Services"
+               data-hi="सेवाएं">
+                Services
+            </a>
+
+            <a href="#weather"
+               data-en="Weather"
+               data-hi="मौसम">
+                Weather
+            </a>
+
+            <a href="#contacts"
+               data-en="Contacts"
+               data-hi="कॉन्टैक्ट">
+                Contacts
+            </a>
+
+        </div>
+
+
+        <div class="nav-actions">
+
+            <button
+                id="languageBtn"
+                class="language-btn"
+            >
+                हिन्दी
+            </button>
+
+
+            <button
+                id="darkModeBtn"
+                class="icon-btn"
+            >
+                🌙
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-content">
+
+        <span
+            class="tag"
+            data-en="EMERGENCY ASSISTANCE PLATFORM"
+            data-hi="इमरजेंसी सहायता प्लेटफॉर्म"
+        >
+            EMERGENCY ASSISTANCE PLATFORM
+        </span>
+
+
+        <h1
+            data-en="Get the right help at the right time."
+            data-hi="सही समय पर सही मदद पाएं।"
+        >
+            Get the right help
+            at the right time.
+        </h1>
+
+
+        <p
+            data-en="Find nearby emergency services, check weather risks and keep important contacts ready."
+            data-hi="नजदीकी इमरजेंसी सेवाएं खोजें, मौसम का जोखिम देखें और जरूरी कॉन्टैक्ट तैयार रखें।"
+        >
+            Find nearby emergency services,
+            check weather risks and keep
+            important contacts ready.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                id="locationBtn"
+                class="btn primary"
+            >
+
+                📍
+
+                <span
+                    data-en="Detect My Location"
+                    data-hi="मेरी लोकेशन पता करें"
+                >
+                    Detect My Location
+                </span>
+
+            </button>
+
+
+            <a
+                href="#emergency"
+                class="btn danger"
+            >
+
+                🚨
+
+                <span
+                    data-en="Start Emergency"
+                    data-hi="इमरजेंसी शुरू करें"
+                >
+                    Start Emergency
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <div class="location-box">
+
+            <div class="location-icon">
+                📍
+            </div>
+
+
+            <div>
+
+                <strong
+                    data-en="Current Location"
+                    data-hi="वर्तमान लोकेशन"
+                >
+                    Current Location
+                </strong>
+
+
+                <p id="locationText">
+
+                    Location not detected.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOS CARD -->
+
+    <div class="sos-card">
+
+        <div class="sos-circle">
+            SOS
+        </div>
+
+
+        <h2
+            data-en="Emergency Number"
+            data-hi="इमरजेंसी नंबर"
+        >
+            Emergency Number
+        </h2>
+
+
+        <div class="emergency-number">
+            112
+        </div>
+
+
+        <p
+            data-en="For urgent situations, contact emergency services."
+            data-hi="जरूरी स्थिति में इमरजेंसी सर्विस से संपर्क करें।"
+        >
+            For urgent situations,
+            contact emergency services.
+        </p>
+
+
+        <a
+            href="tel:112"
+            class="call-btn"
+        >
+
+            📞
+
+            <span
+                data-en="Call 112"
+                data-hi="112 पर कॉल करें"
+            >
+                Call 112
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EMERGENCY
+===================================================== -->
+
+<section
+    id="emergency"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <span
+            class="tag"
+            data-en="EMERGENCY CENTER"
+            data-hi="इमरजेंसी सेंटर"
+        >
+            EMERGENCY CENTER
+        </span>
+
+
+        <h2
+            data-en="What is happening?"
+            data-hi="क्या हुआ है?"
+        >
+            What is happening?
+        </h2>
+
+
+        <p
+            data-en="Choose the emergency type."
+            data-hi="इमरजेंसी का प्रकार चुनें।"
+        >
+            Choose the emergency type.
+        </p>
+
+    </div>
+
+
+    <div class="emergency-grid">
+
+
+        <button
+            class="emergency-type"
+            data-type="Medical Emergency"
+        >
+
+            <span>
+                🏥
+            </span>
+
+            <strong
+                data-en="Medical"
+                data-hi="मेडिकल"
+            >
+                Medical
+            </strong>
+
+            <small
+                data-en="Health or injury"
+                data-hi="स्वास्थ्य या चोट"
+            >
+                Health or injury
+            </small>
+
+        </button>
+
+
+
+        <button
+            class="emergency-type"
+            data-type="Road Accident"
+        >
+
+            <span>
+                🚗
+            </span>
+
+            <strong
+                data-en="Road Accident"
+                data-hi="सड़क दुर्घटना"
+            >
+                Road Accident
+            </strong>
+
+            <small
+                data-en="Vehicle accident"
+                data-hi="वाहन दुर्घटना"
+            >
+                Vehicle accident
+            </small>
+
+        </button>
+
+
+
+        <button
+            class="emergency-type"
+            data-type="Fire Emergency"
+        >
+
+            <span>
+                🔥
+            </span>
+
+            <strong
+                data-en="Fire"
+                data-hi="आग"
+            >
+                Fire
+            </strong>
+
+            <small
+                data-en="Fire or smoke"
+                data-hi="आग या धुआं"
+            >
+                Fire or smoke
+            </small>
+
+        </button>
+
+
+
+        <button
+            class="emergency-type"
+            data-type="Security Emergency"
+        >
+
+            <span>
+                👮
+            </span>
+
+            <strong
+                data-en="Security"
+                data-hi="सुरक्षा"
+            >
+                Security
+            </strong>
+
+            <small
+                data-en="Threat or crime"
+                data-hi="खतरा या अपराध"
+            >
+                Threat or crime
+            </small>
+
+        </button>
+
+
+
+        <button
+            class="emergency-type"
+            data-type="Natural Disaster"
+        >
+
+            <span>
+                🌪️
+            </span>
+
+            <strong
+                data-en="Disaster"
+                data-hi="आपदा"
+            >
+                Disaster
+            </strong>
+
+            <small
+                data-en="Flood, storm, earthquake"
+                data-hi="बाढ़, तूफान, भूकंप"
+            >
+                Flood, storm, earthquake
+            </small>
+
+        </button>
+
+
+
+        <button
+            class="emergency-type"
+            data-type="Other Emergency"
+        >
+
+            <span>
+                🆘
+            </span>
+
+            <strong
+                data-en="Other"
+                data-hi="अन्य"
+            >
+                Other
+            </strong>
+
+            <small
+                data-en="Other urgent situation"
+                data-hi="अन्य जरूरी स्थिति"
+            >
+                Other urgent situation
+            </small>
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        id="emergencyPanel"
+        class="emergency-panel hidden"
+    >
+
+        <h3
+            data-en="Emergency Details"
+            data-hi="इमरजेंसी विवरण"
+        >
+            Emergency Details
+        </h3>
+
+
+        <p id="selectedEmergency">
+            Select an emergency.
+        </p>
+
+
+        <textarea
+            id="emergencyDetails"
+            placeholder="Describe what happened..."
+        ></textarea>
+
+
+        <div class="action-row">
+
+            <button
+                id="saveEmergencyBtn"
+                class="btn danger"
+            >
+                🚨 Save Record
+            </button>
+
+
+            <a
+                href="tel:112"
+                class="btn danger"
+            >
+                📞 112
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+    id="services"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <span
+            class="tag"
+            data-en="NEARBY EMERGENCY SERVICES"
+            data-hi="नजदीकी इमरजेंसी सेवाएं"
+        >
+            NEARBY EMERGENCY SERVICES
+        </span>
+
+
+        <h2
+            data-en="Find help near you"
+            data-hi="अपने पास मदद खोजें"
+        >
+            Find help near you
+        </h2>
+
+
+        <p
+            data-en="Search hospitals, police stations, fire stations and pharmacies."
+            data-hi="अस्पताल, पुलिस स्टेशन, फायर स्टेशन और फार्मेसी खोजें।"
+        >
+            Search hospitals, police stations,
+            fire stations and pharmacies.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-controls">
+
+        <button
+            id="findServicesBtn"
+            class="btn primary"
+        >
+            📍
+            <span
+                data-en="Use My Location"
+                data-hi="मेरी लोकेशन इस्तेमाल करें"
+            >
+                Use My Location
+            </span>
+        </button>
+
+
+        <input
+            id="serviceSearch"
+            type="search"
+            placeholder="Search hospital, police..."
+        >
+
+    </div>
+
+
+
+    <div class="filters">
+
+        <button
+            class="filter active"
+            data-filter="all"
+        >
+            All
+        </button>
+
+
+        <button
+            class="filter"
+            data-filter="hospital"
+        >
+            🏥 Hospitals
+        </button>
+
+
+        <button
+            class="filter"
+            data-filter="police"
+        >
+            👮 Police
+        </button>
+
+
+        <button
+            class="filter"
+            data-filter="fire_station"
+        >
+            🔥 Fire
+        </button>
+
+
+        <button
+            class="filter"
+            data-filter="pharmacy"
+        >
+            💊 Pharmacy
+        </button>
+
+    </div>
+
+
+    <p
+        id="serviceStatus"
+        class="status"
+    >
+        Use your location to search nearby services.
+    </p>
+
+
+    <div
+        id="map"
+        class="map"
+    ></div>
+
+
+    <div
+        id="serviceList"
+        class="service-list"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WEATHER
+===================================================== -->
+
+<section
+    id="weather"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <span
+            class="tag"
+            data-en="WEATHER & SAFETY"
+            data-hi="मौसम और सुरक्षा"
+        >
+            WEATHER & SAFETY
+        </span>
+
+
+        <h2
+            data-en="Weather and risk alerts"
+            data-hi="मौसम और जोखिम अलर्ट"
+        >
+            Weather and risk alerts
+        </h2>
+
+
+        <p
+            data-en="Weather information is loaded for your selected location."
+            data-hi="आपकी चुनी हुई लोकेशन के लिए मौसम की जानकारी दिखाई जाएगी।"
+        >
+            Weather information is loaded
+            for your selected location.
+        </p>
+
+    </div>
+
+
+
+    <div class="weather-controls">
+
+        <button
+            id="weatherBtn"
+            class="btn primary"
+        >
+
+            🌤️
+
+            <span
+                data-en="Load Weather"
+                data-hi="मौसम देखें"
+            >
+                Load Weather
+            </span>
+
+        </button>
+
+
+        <a
+            href="https://mausam.imd.gov.in/"
+            target="_blank"
+            class="btn secondary"
+        >
+
+            ⚠️
+
+            <span
+                data-en="Official IMD Alerts"
+                data-hi="आधिकारिक IMD अलर्ट"
+            >
+                Official IMD Alerts
+            </span>
+
+        </a>
+
+    </div>
+
+
+
+    <div
+        id="alertBox"
+        class="alert-container"
+    ></div>
+
+
+
+    <div
+        id="currentWeather"
+        class="weather-card"
+    >
+
+        <div class="empty">
+
+            🌤️
+
+            <p
+                data-en="Detect your location to load weather."
+                data-hi="मौसम देखने के लिए अपनी लोकेशन पता करें।"
+            >
+                Detect your location to load weather.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <h3
+        class="forecast-title"
+        data-en="3-Day Forecast"
+        data-hi="3 दिन का मौसम"
+    >
+        3-Day Forecast
+    </h3>
+
+
+    <div
+        id="forecast"
+        class="forecast-grid"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACTS
+===================================================== -->
+
+<section
+    id="contacts"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <span
+            class="tag"
+            data-en="TRUSTED CONTACTS"
+            data-hi="विश्वसनीय कॉन्टैक्ट"
+        >
+            TRUSTED CONTACTS
+        </span>
+
+
+        <h2
+            data-en="Emergency contacts"
+            data-hi="इमरजेंसी कॉन्टैक्ट"
+        >
+            Emergency contacts
+        </h2>
+
+    </div>
+
+
+    <div class="contact-form">
+
+        <input
+            id="contactName"
+            type="text"
+            placeholder="Name"
+        >
+
+
+        <input
+            id="contactRelation"
+            type="text"
+            placeholder="Relation"
+        >
+
+
+        <input
+            id="contactPhone"
+            type="tel"
+            placeholder="Phone Number"
+        >
+
+
+        <button
+            id="addContactBtn"
+            class="btn primary"
+        >
+            ➕ Add
+        </button>
+
+    </div>
+
+
+    <div
+        id="contactList"
+        class="contact-list"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HISTORY
+===================================================== -->
+
+<section
+    id="history"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <span
+            class="tag"
+            data-en="EMERGENCY HISTORY"
+            data-hi="इमरजेंसी हिस्ट्री"
+        >
+            EMERGENCY HISTORY
+        </span>
+
+
+        <h2
+            data-en="Saved records"
+            data-hi="सेव रिकॉर्ड"
+        >
+            Saved records
+        </h2>
+
+    </div>
+
+
+    <button
+        id="clearHistoryBtn"
+        class="clear-btn"
+    >
+        🗑️ Clear History
+    </button>
+
+
+    <div
+        id="historyList"
+        class="history-list"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <h3>
+        🆘 Life Emergency Navigator
+    </h3>
+
+
+    <p
+        data-en="Frontend project using HTML, CSS, JavaScript, OpenStreetMap and public APIs."
+        data-hi="HTML, CSS, JavaScript, OpenStreetMap और public APIs से बना frontend project."
+    >
+        Frontend project using HTML, CSS,
+        JavaScript, OpenStreetMap and public APIs.
+    </p>
+
+
+    <small>
+        Map data © OpenStreetMap contributors
+    </small>
+
+</footer>
+
+
+
+<!-- =====================================================
+     LEAFLET JS
+===================================================== -->
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
+
+
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
+
+<script
+    src="script.js"
+></script>
+
+
+</body>
+
+</html>
