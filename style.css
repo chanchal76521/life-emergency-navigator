@@ -1,0 +1,1491 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7fb;
+
+    color: #172033;
+
+    line-height: 1.5;
+
+    transition: .3s;
+
+}
+
+
+button,
+input,
+textarea {
+
+    font-family: inherit;
+
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 9999;
+
+    background: white;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
+}
+
+
+.navbar {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    min-height: 70px;
+
+    padding:
+        0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.logo {
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+
+.nav-links {
+
+    margin-left: auto;
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #667085;
+
+    padding:
+        8px 10px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.nav-links a:hover {
+
+    background: #eef2ff;
+
+    color: #2563eb;
+
+}
+
+
+.nav-actions {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.language-btn,
+.icon-btn {
+
+    border:
+        1px solid #dfe3ea;
+
+    background: white;
+
+    padding:
+        8px 11px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        80px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr .5fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+.tag {
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    margin:
+        15px 0;
+
+    max-width: 750px;
+
+}
+
+
+.hero-content > p {
+
+    max-width: 700px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.btn {
+
+    border: none;
+
+    padding:
+        12px 17px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    font-weight: 700;
+
+    transition: .2s;
+
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.primary {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+.danger {
+
+    background: #dc2626;
+
+    color: white;
+
+}
+
+
+.secondary {
+
+    background: #eef2ff;
+
+    color: #3730a3;
+
+}
+
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-box {
+
+    margin-top: 25px;
+
+    max-width: 650px;
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    gap: 13px;
+
+    align-items: center;
+
+}
+
+
+.location-icon {
+
+    font-size: 27px;
+
+}
+
+
+.location-box p {
+
+    color: #667085;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   SOS
+===================================================== */
+
+.sos-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border:
+        1px solid #e5e7eb;
+
+    box-shadow:
+        0 15px 40px
+        rgba(15,23,42,.08);
+
+}
+
+
+.sos-circle {
+
+    width: 105px;
+
+    height: 105px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+}
+
+
+.sos-card h2 {
+
+    margin-top: 18px;
+
+}
+
+
+.emergency-number {
+
+    color: #dc2626;
+
+    font-size: 48px;
+
+    font-weight: 900;
+
+}
+
+
+.sos-card p {
+
+    color: #667085;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.call-btn {
+
+    display: block;
+
+    background: #dc2626;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        65px 20px;
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 32px;
+
+    margin:
+        5px 0;
+
+}
+
+
+.section-heading p {
+
+    color: #667085;
+
+}
+
+
+
+/* =====================================================
+   EMERGENCY GRID
+===================================================== */
+
+.emergency-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.emergency-type {
+
+    border:
+        1px solid #e5e7eb;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: .2s;
+
+}
+
+
+.emergency-type:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(15,23,42,.08);
+
+}
+
+
+.emergency-type span {
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.emergency-type strong {
+
+    display: block;
+
+    font-size: 17px;
+
+}
+
+
+.emergency-type small {
+
+    display: block;
+
+    color: #667085;
+
+    margin-top: 4px;
+
+}
+
+
+
+/* =====================================================
+   EMERGENCY PANEL
+===================================================== */
+
+.emergency-panel {
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    margin-top: 22px;
+
+}
+
+
+.emergency-panel textarea {
+
+    width: 100%;
+
+    min-height: 130px;
+
+    resize: vertical;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 9px;
+
+    padding: 12px;
+
+    margin:
+        15px 0;
+
+}
+
+
+.action-row {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.service-controls {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.service-controls input {
+
+    flex: 1;
+
+    border:
+        1px solid #dfe3ea;
+
+    border-radius: 9px;
+
+    padding:
+        12px 14px;
+
+    outline: none;
+
+}
+
+
+.service-controls input:focus {
+
+    border-color:
+        #2563eb;
+
+}
+
+
+.filters {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.filter {
+
+    background: white;
+
+    border:
+        1px solid #dfe3ea;
+
+    padding:
+        9px 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+.filter.active {
+
+    background: #2563eb;
+
+    color: white;
+
+    border-color:
+        #2563eb;
+
+}
+
+
+.status {
+
+    color: #667085;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.map {
+
+    width: 100%;
+
+    height: 480px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #dfe3ea;
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* =====================================================
+   SERVICE LIST
+===================================================== */
+
+.service-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.service-card {
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 13px;
+
+    padding: 17px;
+
+}
+
+
+.service-card h3 {
+
+    font-size: 16px;
+
+}
+
+
+.service-card p {
+
+    color: #667085;
+
+    font-size: 13px;
+
+    margin:
+        5px 0 12px;
+
+}
+
+
+.service-actions {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.small-btn {
+
+    border: none;
+
+    padding:
+        8px 10px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.show-btn {
+
+    background: #eef2ff;
+
+    color: #3730a3;
+
+}
+
+
+.direction-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+
+/* =====================================================
+   WEATHER
+===================================================== */
+
+.weather-controls {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 18px;
+
+}
+
+
+.alert-container {
+
+    margin-bottom: 15px;
+
+}
+
+
+.alert {
+
+    padding: 15px;
+
+    border-radius: 11px;
+
+    margin-bottom: 9px;
+
+    border-left:
+        5px solid;
+
+}
+
+
+.alert.warning {
+
+    background: #fff7ed;
+
+    border-color: #f97316;
+
+}
+
+
+.alert.danger {
+
+    background: #fef2f2;
+
+    border-color: #dc2626;
+
+}
+
+
+.alert.info {
+
+    background: #eff6ff;
+
+    border-color: #2563eb;
+
+}
+
+
+.weather-card {
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+}
+
+
+.weather-main {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.weather-icon {
+
+    font-size: 65px;
+
+}
+
+
+.temperature {
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+}
+
+
+.weather-meta {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+
+.weather-stat {
+
+    background: #f5f7fb;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+}
+
+
+.weather-stat strong {
+
+    display: block;
+
+}
+
+
+.weather-stat span {
+
+    color: #667085;
+
+    font-size: 13px;
+
+}
+
+
+.forecast-title {
+
+    margin:
+        28px 0 15px;
+
+}
+
+
+.forecast-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 15px;
+
+}
+
+
+.forecast-card {
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 13px;
+
+    padding: 18px;
+
+    text-align: center;
+
+}
+
+
+.forecast-card .icon {
+
+    font-size: 35px;
+
+    margin:
+        8px 0;
+
+}
+
+
+.forecast-temp {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr auto;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.contact-form input {
+
+    border:
+        1px solid #dfe3ea;
+
+    border-radius: 9px;
+
+    padding:
+        12px;
+
+    outline: none;
+
+}
+
+
+.contact-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 12px;
+
+}
+
+
+.contact-card {
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.avatar {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 800;
+
+}
+
+
+.contact-info {
+
+    flex: 1;
+
+}
+
+
+.contact-info p {
+
+    color: #667085;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   HISTORY
+===================================================== */
+
+.clear-btn {
+
+    background: white;
+
+    color: #dc2626;
+
+    border:
+        1px solid #fecaca;
+
+    padding:
+        9px 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-bottom: 15px;
+
+}
+
+
+.history-card {
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-left:
+        5px solid #dc2626;
+
+    padding: 17px;
+
+    border-radius: 11px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.history-card h3 {
+
+    margin-bottom: 6px;
+
+}
+
+
+.history-card p {
+
+    color: #667085;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.empty {
+
+    text-align: center;
+
+    padding: 35px;
+
+    color: #667085;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        40px 20px;
+
+    border-top:
+        1px solid #e5e7eb;
+
+    color: #667085;
+
+}
+
+
+footer small {
+
+    display: block;
+
+    margin-top: 8px;
+
+}
+
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark {
+
+    background: #0b1220;
+
+    color: #f3f4f6;
+
+}
+
+
+body.dark header,
+
+body.dark .sos-card,
+
+body.dark .location-box,
+
+body.dark .emergency-type,
+
+body.dark .emergency-panel,
+
+body.dark .service-card,
+
+body.dark .weather-card,
+
+body.dark .forecast-card,
+
+body.dark .contact-card,
+
+body.dark .history-card,
+
+body.dark .language-btn,
+
+body.dark .icon-btn,
+
+body.dark .filter,
+
+body.dark .clear-btn {
+
+    background: #111827;
+
+    color: #f3f4f6;
+
+    border-color: #263244;
+
+}
+
+
+body.dark input,
+
+body.dark textarea {
+
+    background: #111827;
+
+    color: white;
+
+    border-color: #263244;
+
+}
+
+
+body.dark .hero-content > p,
+
+body.dark .section-heading p,
+
+body.dark .location-box p,
+
+body.dark .sos-card p,
+
+body.dark .service-card p,
+
+body.dark .weather-stat span,
+
+body.dark .contact-info p,
+
+body.dark .history-card p,
+
+body.dark .status {
+
+    color: #a7b0c0;
+
+}
+
+
+body.dark .weather-stat {
+
+    background: #1f2937;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:950px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .emergency-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .service-list {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .contact-form {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .navbar {
+
+        padding: 10px 15px;
+
+    }
+
+
+    .logo {
+
+        font-size: 16px;
+
+    }
+
+
+    .hero {
+
+        padding:
+            50px 15px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 39px;
+
+    }
+
+
+    .section {
+
+        padding:
+            50px 15px;
+
+    }
+
+
+    .emergency-grid,
+
+    .service-list,
+
+    .forecast-grid,
+
+    .contact-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .service-controls {
+
+        flex-direction: column;
+
+    }
+
+
+    .contact-form {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .weather-meta {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .map {
+
+        height: 380px;
+
+    }
+
+}
